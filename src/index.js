@@ -6,7 +6,7 @@ import cors from 'cors'
 const app = express()
 
 
-app.set('port', process.env.PORT_APP || 3000);
+app.set('port', process.env.PORT_APP || process.env.PORT || 3000);
 
 app.listen(app.get('port'), () => {
     console.log("Server is running on port " + app.get('port'));
